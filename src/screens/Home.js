@@ -18,23 +18,27 @@ import Header from '../component/Header';
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 const Home = ({ navigation }) => {
+
+
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
+  const api_key = '{API_Key}';
 
   useEffect(() => {
     LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
   }, []);
 
   const searchResults = () => {
+
     if (startDate === '' || endDate === '') {
       alert('Start date or/and end date is/are empty');
     } else if (startDate > endDate) {
       alert('Start date should be less than or equal to end date.');
     } else {
-      const url = `https://api.nasa.gov/planetary/apod?start_date=${startDate}&end_date=${endDate}&api_key=AddEttsg0VRFmHNcF1kkRJJ4daTbn85PiCIDK9Br`;
-
+    //If there's not error fetch data from cusomized linked based on start date, end date and API key
+      const url = `https://api.nasa.gov/planetary/apod?start_date=${startDate}&end_date=${endDate}&api_key=${api_key}`;
       axios
         .get(url)
         .then((res) => {
@@ -45,10 +49,12 @@ const Home = ({ navigation }) => {
     }
   };
 
+  //
   const renderImages = (item) => {
     return (
       <TouchableOpacity
         style={{ flex: 1, alignItems: 'left'}}
+        //Navigate to picture details screen
         onPress={() => navigation.navigate('Picture Details', { data: item })}
       >
         <Image
@@ -134,8 +140,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   imageStyle: {
-    height: 125,
-    width: 125,
+    height: screenWidth / 3,
+    width: screenWidth / 3,
     marginTop: 10,
     borderRadius: 5,
   },
