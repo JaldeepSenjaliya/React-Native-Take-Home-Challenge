@@ -20,14 +20,14 @@ Like `npm start`, but also attempts to open your app in the iOS Simulator if you
 
 Like `npm start`, but also attempts to open your app on a connected Android device or emulator.
 
-If you have Expo app on your phone, scan the QR code with your camera
+If you have Expo app on your phone, scan the QR code with your camera.
 
 
 # Image API #
 Images are fetched from `"APOD" Nasa API` 
 [API Link and Documentation](https://api.nasa.gov).
 
-App Snapshot:
+# App Snapshot #
 
-![screenshot](screen_1.jpg?raw=true "Screenshot")
-![screenshot](screen_2.jpg?raw=true "Screenshot")
+<img src="screen_1.png" width="400" height="850"/> <img src="screen_2.png" width="400" height="850"/>
+
