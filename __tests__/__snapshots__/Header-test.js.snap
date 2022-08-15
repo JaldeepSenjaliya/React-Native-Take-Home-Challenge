@@ -24,7 +24,7 @@ exports[`renders correctly 1`] = `
       }
     }
   >
-     Search for Astronomy: Picture of the day by date.
+    Search for Astronomy: Picture of the day by date.
   </Text>
 </View>
 `;
