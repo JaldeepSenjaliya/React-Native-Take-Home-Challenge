@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "fontWeight": "bold",
+        "marginLeft": 10,
+        "marginTop": 30,
+      }
+    }
+  >
+    Picture of the day:
+  </Text>
+  <Text
+    style={
+      Object {
+        "fontSize": 15,
+        "fontWeight": "normal",
+        "marginLeft": 10,
+        "marginTop": 10,
+      }
+    }
+  >
+     Search for Astronomy: Picture of the day by date.
+  </Text>
+</View>
+`;
