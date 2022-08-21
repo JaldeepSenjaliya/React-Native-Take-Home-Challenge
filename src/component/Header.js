@@ -1,5 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
+import navigationStrings from '../constants/navigationStrings';
 
 const Header = () => {
   return (
@@ -14,12 +15,14 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   headingText: {
+    color: navigationStrings.secondaryColor,
     marginTop: 30,
     marginLeft: 10,
     fontWeight: 'bold',
     fontSize: 20,
   },
   subHeadingText: {
+    color: navigationStrings.primaryColor,
     marginTop: 10,
     marginLeft: 10,
     fontWeight: 'normal',

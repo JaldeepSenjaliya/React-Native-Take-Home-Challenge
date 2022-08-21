@@ -8,15 +8,15 @@ import {
   ScrollView,
   SafeAreaView,
 } from 'react-native';
+import navigationStrings from '../constants/navigationStrings';
 
 let { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 
 const PictureDetails = ({ route }) => {
-  useEffect(() => {
+    
     LogBox.ignoreLogs([
       'Non-serializable values were found in the navigation state.',
     ]);
-  }, []);
 
   return (
     <SafeAreaView style={{backgroundColor: '#fff'}}>
@@ -41,16 +41,16 @@ const styles = StyleSheet.create({
   },
   titleText: {
     marginTop: 20,
-    marginLeft: 10,
+    marginHorizontal: 5,
     fontWeight: 'bold',
     fontSize: 25,
+    color: navigationStrings.secondaryColor
   },
   imageStyle: {
     height: screenWidth,
-    width: '100%',
+    width: '98%',
     marginTop: 10,
-    marginLeft: 5,
-    marginRight: 5,
+    marginHorizontal: 10,
     borderRadius: 5,
   },
   explanationText: {
@@ -59,6 +59,8 @@ const styles = StyleSheet.create({
     marginRight: 10,
     fontWeight: 'normal',
     fontSize: 16,
+    alignItems: 'right',
+    color: navigationStrings.primaryColor
   },
 });
 

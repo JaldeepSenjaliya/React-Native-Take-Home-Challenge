@@ -13,7 +13,7 @@ export default function Routes() {
         initialRouteName={navigationStrings.home}
         screenOptions={{ headerLargeTitle: true }}
       >
-        <Stack.Screen name={navigationStrings.home} component={Home} />
+        <Stack.Screen name={navigationStrings.home} component={Home} options={{ headerTintColor: navigationStrings.primaryColor }}/>
         <Stack.Screen
           name={navigationStrings.pictureDetails}
           component={PictureDetails}
